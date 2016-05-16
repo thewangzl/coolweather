@@ -11,7 +11,7 @@ import com.coolweather.app.db.CoolWeatherDB;
 import com.coolweather.app.model.City;
 import com.coolweather.app.model.Country;
 import com.coolweather.app.model.Province;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -91,6 +91,7 @@ public class Utility {
 
 	}
 
+	@SuppressLint("CommitPrefEdits")
 	public static void saveWeatherInfo(Context context, String cityName, String weatherCode, String temp1, String temp2,
 			String weatherDesp, String publishTime) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年M月d日",Locale.CHINA);
